@@ -1,0 +1,22 @@
+<input placeholder="Nome" [(ngModel)]="merce.name" /><br/>
+<input placeholder="prezzo" [(ngModel)]="merce.price" /><br/>
+<input placeholder="peso" [(ngModel)]="merce.weight" /><br/>
+<button (click)="salvaMerce()" >SALVA</button>
+
+<div *ngFor="let p of merci">
+  <h2 [style.color]="chooseColor(p.weight)"   >{{p.name}} {{p.price}} $  di peso {{p.weight}}</h2>
+</div>
+
+
+<!--
+TIPI BINDING
+    {{}} one way - Interpolazione, stampa un valore nell'html
+    [()] two-way - lega casella input a variabile controller
+    () event - chiama un metodo del controller quando si verifica evento su un elemento
+    [] property binding, lega ATTRIBUTO ELEMENTO HTML a valore controller
+
+
+
+
+
+-->

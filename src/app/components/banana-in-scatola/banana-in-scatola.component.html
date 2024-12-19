@@ -1,0 +1,14 @@
+<input [(ngModel)]="valoreCasellaInput" />
+<!-- {{}} mustache- baffo -->
+<!--TWO-WAY BINDING [()] Banana in a box -->
+<button (click)="stampaValore()" >STAMPA</button>
+<button (click)="cambiaValore()" >CAMBIA</button>
+<br/><br/><br/>
+<input placeholder="Nome" [(ngModel)]="persona.name" /><br/>
+<input placeholder="Cognome" [(ngModel)]="persona.surname" /><br/>
+<input placeholder="Età" [(ngModel)]="persona.age" /><br/>
+<button (click)="salvaPersona()" >SALVA</button>
+
+<div *ngFor="let p of persone">
+  <h2>{{p.name}} {{p.surname}}  di anni {{p.age}}</h2>
+</div>
