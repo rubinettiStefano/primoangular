@@ -22,28 +22,6 @@ export class Es2Component {
 
   salvaMerce()
   {
-    let giaPresente = false;
-
-
-    // for(let i=0; i<this.merci.length;i++)
-    //   if(this.merci[i].name==this.merce.name)
-    //       giaPresente = true;
-
-    for(let m of this.merci)
-      if(m.name==this.merce.name)
-           giaPresente = true;
-
-    giaPresente = this.merci.filter(m=>m.name==this.merce.name).length!=0;
-
-    giaPresente = this.merci.map(m => m.merce).includes(this.merce.name);
-
-    giaPresente = this.merci.find(m=>m.name==this.merce.name);
-
-    if(giaPresente)
-    {
-      alert("Merce già presente");
-      return;
-    }
 
     let clone = {...this.merce};
     this.merci.push(clone);

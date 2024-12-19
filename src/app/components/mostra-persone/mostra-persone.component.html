@@ -1,0 +1,13 @@
+<div>
+  <input type="text" [(ngModel)]="personToInsert.firstName" placeholder="nome"><br/>
+  <input type="text" [(ngModel)]="personToInsert.lastName" placeholder="cognome"><br/>
+  <input type="date" [(ngModel)]="personToInsert.birthDate" placeholder="nascita"><br/>
+
+  <button (click)="salva()">SALVA</button>
+  <br/>
+</div>
+
+<div *ngFor="let p of persons">
+  <h2>{{p.firstName}} {{p.lastName}}  {{p.birthDate}}</h2>
+</div>
+
